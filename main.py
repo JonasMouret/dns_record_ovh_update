@@ -30,7 +30,7 @@ def main():
     )
     logging.info('DONE\n')
     logging.info('=============== Getting domain records ===============')
-    records = client.get('/domain/zone/{}/record'.format(domain), fieldType='AAAA')
+    records = client.get('/domain/zone/{}/record'.format(domain), fieldType='A')
     logging.info('DONE\n')
  
     for record in records:
