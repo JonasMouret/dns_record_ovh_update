@@ -4,10 +4,10 @@ import logging
 import os
 from dotenv import load_dotenv
 from datetime import datetime
-
+from requests import get
 
 def get_external_ip():
-    return urllib.request.urlopen('https://ident.me').read().decode('utf8')
+    return get('https://ipinfo.io/ip').text
 
 def main():
     now = datetime.now()
